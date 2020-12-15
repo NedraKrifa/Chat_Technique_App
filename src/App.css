@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Roboto:wght@700&display=swap');
+.App {
+  color: #05296d;
+  min-height: 100vh;
+}
+.message-input {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  max-width: 1030px;
+  grid-area: footer;
+  margin-left: 30px;
+  margin-top: 20px;
+}
+
+.inputField {
+  padding: 15px;
+  font-size: 14px;
+  border-radius: 25px;
+  flex-grow: 1;
+  outline: none;
+}
+.inputField:focus{
+  color: rgb(83, 83, 83);
+}
+
+.Btn-send{
+  background: #05296d;
+  border: none;
+  width: 50px;
+  border-radius: 50%;
+  font-size: 25px;
+  color: white;
+  transform: rotate(-30deg);
+  cursor: pointer;
+  margin-left: 10px;
+  outline: none;
+}
+
+.chat-app{
+  display: grid;
+  grid-template-areas: 
+  "header header header header"
+  "content content content sider"
+  "footer footer footer sider";
+}
+
+.chat-header{
+  width: 100%;
+  grid-area: header;
+  display: flex;
+  justify-content: space-around;
+}
+.header-icon{
+  margin-right: 6px;
+}
+.menu-chat{
+  display: flex;
+  list-style: none;
+  margin-top: 40px;
+  color: dimgrey;
+  font-size: 14px;
+  font-family: 'Krona One', sans-serif;
+  font-family: 'Roboto', sans-serif;
+}
+.menu-chat_item:hover{
+  color:#05296d;
+  cursor: pointer;
+}
+.sider-menu{
+  grid-area: sider;
+  background-color: #eff4f8;
+  margin-right: 25px;
+  border-radius: 25px;
+  text-align: center;
+}
+.sider-menu h2,p{
+  color: #05296d;
+}
+.user-avatar{
+  font-size: 100px;
+  margin-top: 30px;
+  color: #05296d;
+}
+.messages{
+  overflow: auto;
+  grid-area: content;
+  height: 70vh;
+  background-color: #eff4f8;
+  padding: 10px;
+  margin: 0 25px;
+  border-radius: 25px;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* make scrollbar transparent */
+}
+
+.messages-list {
+  padding: 10px 5px;
+  max-width: 900px;
+  width: 100%;
+  margin: 0;
+  list-style: none;
+  flex-grow: 1;
+  overflow: auto;
+}
+
+.Messages-message {
+  display: flex;
+  margin-top: 10px;
+}
+
+.Message-content {
+  display: inline-block;
+}
+
+.Messages-message>.avatar {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 10px -10px;
+}
+
+.Message-content>.username {
+  display: block;
+  color: gray;
+  font-size: 12px;
+  padding-bottom: 4px;
+}
+
+.Message-content>.text {
+  padding: 10px;
+  max-width: 400px;
+  margin: 0;
+  border-radius: 12px;
+  background-color: rgb(148, 216, 255);
+  color: rgb(90, 90, 90);
+  display: inline-block;
+  /*text-transform: capitalize;*/
+}
